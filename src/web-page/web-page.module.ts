@@ -3,6 +3,6 @@ import { WebPageResolver } from './web-page.resolver';
 import { WebPageService } from './web-page.service';
 
 @Module({
-  providers: [WebPageResolver, WebPageService],
+  providers: [WebPageService, WebPageResolver],
 })
 export class WebPageModule {}

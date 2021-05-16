@@ -8,13 +8,13 @@ import { WebPageService } from './web-page.service';
 export class WebPageResolver {
   constructor(private readonly webPageService: WebPageService) {}
 
-  @Query(() => WebPage, { name: 'webPage' })
+  @Query(() => WebPage, { name: 'webpage' })
   getWebPage(@Args() getWebPageArgs: GetWebPageArgs): WebPage {
     return this.webPageService.getWebPage(getWebPageArgs);
   }
 
-  @Mutation(() => WebPage)
-  getPage(@Args('getWebPageData') getWebPageData: GetWebPageInput): WebPage {
-    return this.webPageService.getWebPage(getWebPageData);
+  @Mutation((returns) => WebPage, { name: 'webpage' })
+  async getPage(@Args('page') page: GetWebPageInput): Promise<WebPage> {
+    return this.webPageService.getWebPage(page);
   }
 }
