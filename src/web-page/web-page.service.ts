@@ -9,15 +9,12 @@ export class WebPageService {
   private webpages: WebPage[] = [];
 
   public async getWebPage(getWebPageArgs: GetWebPageArgs): Promise<WebPage> {
-    // where do we parse the url and save the required fields ?
-
     let res = this.webpages.find(
       (page) => page.pageUrl === getWebPageArgs.pageUrl,
     );
 
     if (!res) {
       const result = await Meta.parser(getWebPageArgs.pageUrl);
-
       const images = result.images;
       let largestImage;
 
