@@ -9,7 +9,7 @@ export class WebPageResolver {
   constructor(private readonly webPageService: WebPageService) {}
 
   @Query(() => WebPage, { name: 'web', nullable: true })
-  getWebPage(@Args() getWebPageArgs: GetWebPageArgs): WebPage {
+  getWebPage(@Args() getWebPageArgs: GetWebPageArgs): Promise<WebPage> {
     return this.webPageService.getWebPage(getWebPageArgs);
   }
 }
