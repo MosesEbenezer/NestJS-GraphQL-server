@@ -16,6 +16,8 @@ export class WebPageService {
     if (!res) {
       const result = await Meta.parser(getWebPageArgs.pageUrl);
       const images = result.images;
+      console.log('result', result);
+
       let largestImage;
 
       if (images.length != 0) {
@@ -25,16 +27,18 @@ export class WebPageService {
             return img.width > 0 && img.height > 0;
           });
 
-        largestImage = sortedImages[0];
+        if (sortedImages.length != 0) largestImage = sortedImages[0].url;
+        largestImage = result.og.images[0].url;
       } else {
-        largestImage = result.og.images[0];
+        if ((largestImage = result.og.images.length != 0))
+          largestImage = result.og.images[0].url;
       }
 
       const metaObj: WebPage = {
         pageUrl: getWebPageArgs.pageUrl,
-        title: result.meta.title,
-        description: result.meta.description,
-        largestImage: largestImage || null,
+        title: result.meta.title || result.og.title || 'null',
+        description: result.meta.description || result.og.description || 'null',
+        largestImage: largestImage || 'null',
       };
 
       this.webpages.push(metaObj);
