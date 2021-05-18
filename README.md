@@ -56,6 +56,6 @@ query {
 }
 ```
 
-Now change the pageUrl: "https://en.wikipedia.org/wiki/Electricity#:~:text=Electricity%20is%20the%20set%20of,as%20described%20by%20Maxwell's%20equations", with other urls to have the meta data of the web page url.
+Now change the pageUrl: "https://en.wikipedia.org/wiki/Electricity#:~:text=Electricity%20is%20the%20set%20of,as%20described%20by%20Maxwell's%20equations", with other urls to have the meta data of the web page url returned.
 
 Best regards!
