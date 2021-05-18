@@ -16,7 +16,7 @@ export class WebPageService {
     if (!res) {
       const result = await Meta.parser(getWebPageArgs.pageUrl);
       const images = result.images;
-      console.log('result', result);
+      // console.log('result', result);
 
       let largestImage;
 

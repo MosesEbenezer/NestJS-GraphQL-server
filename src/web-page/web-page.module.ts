@@ -4,6 +4,7 @@ import { WebPageService } from './web-page.service';
 
 @Module({
   imports: [
+    CacheModule.register(),
     // CacheModule.register({
     //   ttl: 5,
     //   max: 100,
