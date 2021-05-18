@@ -43,6 +43,19 @@ In order to test the project and as requested, here's the link to the delpoyed p
 https://nestjs-graghql-staging.herokuapp.com/graphql
 
 ### Route testing parameters:
+
+In the graphQL playground that appears, paste the following query object to test the route as specified:
 ```
-www
+query {
+  web(pageUrl: "https://en.wikipedia.org/wiki/Electricity#:~:text=Electricity%20is%20the%20set%20of,as%20described%20by%20Maxwell's%20equations") {
+    pageUrl
+  	title
+  	description
+  	largestImage
+  }
+}
 ```
+
+Now change the pageUrl: "https://en.wikipedia.org/wiki/Electricity#:~:text=Electricity%20is%20the%20set%20of,as%20described%20by%20Maxwell's%20equations", with other urls to have the meta data of the web page url.
+
+Best regards!
