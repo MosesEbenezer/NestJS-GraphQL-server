@@ -60,4 +60,6 @@ query {
 
 Now change the pageUrl: "https://nestjs.com/", with other urls to have the meta data of the web page url returned.
 
+To run NestJS application locally without docker, run 'npm run start'
+
 Best regards!
