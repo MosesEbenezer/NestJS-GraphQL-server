@@ -1,7 +1,7 @@
 ## Project Requirements:
 
 1) Should Have Docker Desktop Installed
-2) Should download a zip or close this NestJs-Graghql App.
+2) 2) Should download a zip or close this NestJs-Graghql App.
 
 
 ### Docker Installation
@@ -12,6 +12,7 @@ b) For the installation guide on Linux visit
 https://docs.docker.com/install/linux/docker-ce/ubuntu/
 
 c) For the installation guide on macOs visit https://docs.docker.com/docker-for-mac/
+
 
 ### NestJs Application Installation
 Clone or download the zip of this project and open it in your preferred editor.
@@ -42,12 +43,13 @@ In order to test the project and as requested, here's the link to the delpoyed p
 
 https://nestjs-graghql-staging.herokuapp.com/graphql
 
+
 ### Route testing parameters:
 
 In the graphQL playground that appears, paste the following query object to test the route as specified:
 ```
 query {
-  web(pageUrl: "https://en.wikipedia.org/wiki/Electricity#:~:text=Electricity%20is%20the%20set%20of,as%20described%20by%20Maxwell's%20equations") {
+  web(pageUrl: "https://nestjs.com/") {
     pageUrl
   	title
   	description
@@ -56,6 +58,6 @@ query {
 }
 ```
 
-Now change the pageUrl: "https://en.wikipedia.org/wiki/Electricity#:~:text=Electricity%20is%20the%20set%20of,as%20described%20by%20Maxwell's%20equations", with other urls to have the meta data of the web page url returned.
+Now change the pageUrl: "https://nestjs.com/", with other urls to have the meta data of the web page url returned.
 
 Best regards!
