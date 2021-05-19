@@ -1,7 +1,7 @@
 ## Project Requirements:
 
-1) Should Have Docker Desktop Installed
-2) 2) Should download a zip or close this NestJs-Graghql App.
+1) Should Have Docker Desktop Installed.
+2) Should download the zip folder or clone this project repository.
 
 
 ### Docker Installation
